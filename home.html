@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page  
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="text-align:center; font-family:'Courier New', Courier, monospace"> Stargazing Rater</h1>
+        <br>
+        <img src="/static/dalle.png" class="rounded" alt="Man Staring at the Stars">
+        <br>
+        <br>
+        <h4 style="text-align:center; font-size:15px; color:grey"><i>“Dwell on the beauty of life. Watch the stars, and see yourself running with them.”</i></h4>
+        <h1 style="text-align:center; font-size:20px; color:grey"><b>- Marcus Aurelius</b></h1>
+        <br>
+        <br>
+        <form>
+            <div class="form-group">
+              <input type="location" class="form-control" id="location" placeholder="Enter a city" name="location">
+            </div>
+            <button type="submit" class="input1">Go!</button>
+        </form> 
+        <p>
+
+        </p>
+    </div>
+    
+{% endblock %}

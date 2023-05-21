@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Results 
+{% endblock %}
+
+{% block content %}
+<style>
+    .center {
+        margin: auto; 
+        position:relative;
+        left:50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        height: auto !important
+    }
+</style>
+    <body>
+        <h1 style="text-align:center; font-family:'Courier New', Courier, monospace">{{ value1 }}</h1>
+        <h2 style="text-align:center;">Star Points</h2>
+        <h1 style="text-align:center; font-size:90px;">{{ value2 }}</h1>
+        <h1 style="text-align:center; font-size:90px;">{{ latt }}</h1>
+        <h1 style="text-align:center; font-size:90px;">{{ longg }}</h1>
+        <img src= "{{ value3 }}" style="position:relative;" class="center" height="120px">
+        <p style="text-align:center;"><i>Light Pollution: 29</i></p>
+        <p style="text-align:center;"><i>Weather: 43</i></p>
+        <p style="text-align:center;"><i>Moon Phase: Full Moon</i></p>
+        <div class="container">
+            <a href=" {{ url_for('home_page')}} "><button type="submit" class="input1">Test Another Location</button></a>
+        </div>  
+    </body>
+{% endblock %}
