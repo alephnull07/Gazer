@@ -28,9 +28,6 @@ def home_page():
     else:
         return render_template('home.html')
 
-LM = 3
-AQ = 19
-
 CityCoor = pd.read_csv("worldcities.csv")
 CityCoor = CityCoor.drop(columns = ['city_ascii','iso2','iso3','admin_name','capital','population','id'])
 CityCoor = pd.read_csv("worldcities.csv")
@@ -55,6 +52,7 @@ def search_city(city):
     global lng 
     lat = CityCoor.iloc[low,0]
     lng = CityCoor.iloc[low,1]
+    return (lat, lng)
   else:
     return (0,0)
 
@@ -83,6 +81,7 @@ api_token = 'oxGvZawYkOVvhVWBQFmXWdkdgqXBZomI'
 url = f'https://api.weather.gov/points/{latitude},{longitude}'
 
 #new york 45, -70
+
 #topeka, Kansas 39,-97
 headers = {'token': api_token}
 
