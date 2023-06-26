@@ -1,1 +1,1 @@
-# tritonhacks23 Winning Project
+# TritonHacks23 Winning Project
